@@ -15,5 +15,8 @@ namespace server.Models
           MyCharacters: [Character Id's]
         }
     */
+    public string Id { get; set; }
+    public string Name { get; set; }
+    public List<string> MyCharacters { get; set; }
   }
 }

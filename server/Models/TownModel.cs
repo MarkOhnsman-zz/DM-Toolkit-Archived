@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace server.Models
 {
-  public class TownModel
+  public class TownItem
   {
     /*
     Town: 
@@ -15,5 +15,9 @@ namespace server.Models
         NPC's: [Character Id's]
       }
     */
+    public string Id { get; set; }
+    public string CreatorId { get; set; }
+    public List<string> NPCs { get; set; }
+
   }
 }
