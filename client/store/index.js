@@ -26,12 +26,56 @@ var store = new vuex.Store({
     error: {}
   },
   mutations: {
+    //USERS
+    setUser(state, user) {
+      state.user = user
+    },
     setError(state, err){
       state.error = err
     }
   },
   actions: {
-    
+    //USERS
+    login({ commit, dispatch }, user) {
+      auth.post('login', user)
+        .then(res => {
+          if (res.data.error) {
+            return handleError(res.data.error)
+          }
+          commit('setUser', res.data.data)
+          router.push('/home')
+        })
+        .catch(handleError)
+    },
+    register({ commit, dispatch }, user) {
+      auth.post('register', user)
+        .then(res => {
+          if (res.data.error) {
+            return handleError(res.data.error)
+          }
+          commit("setUser", res.data.data)
+          router.push('/home')
+        })
+        .catch(handleError)
+    },
+    authenticate() {
+      auth('authenticate')
+        .then(res => {
+          if (!res.data.data) {
+            return router.push('/login')
+          }
+          state.user = res.data.data
+          router.push('/home')
+        }).catch(err => {
+          router.push('/login')
+        })
+    },
+    logout({ commit, dispatch }, user) {
+      auth.delete('logout', user)
+        .then(res => {
+          router.push('/login')
+        }).catch(handleError)
+    },
     handleError({commit, dispatch}, err){
       commit('setError', err)
     }
