@@ -20,7 +20,7 @@ let auth = axios.create({
   withCredentials: true
 })
 
-var store = new vuex.Store({
+var store = new Vuex.Store({
   state: {
     user: {},
     error: {}
