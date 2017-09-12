@@ -7,7 +7,7 @@ var schema = new mongoose.Schema({
   description: { type: String },
   feature: {type: Object, required: true, default: []}, //send whole object
   extra: {type: Array, type: []}, // send one of 
-  tools: {type: Array, required: true, default: []}, //send all
+  tools: {type: Array, default: []}, //send all
   skills: {type: Array, required: true, default: []}, // send all
   equipment: {type: Array, required: true, default: []}, // send all
   traits: {type: Array, required: true, default: []}, // send one
