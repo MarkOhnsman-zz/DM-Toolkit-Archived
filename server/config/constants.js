@@ -7,6 +7,12 @@ const actions = {
 }
 
 const models = {
+  user: {
+    name: "User",
+    endpoint: 'users',
+    preventDefaultApi: false,
+    useCustomRoutes: false
+  },
   background: {
     name: 'Background',
     endpoint: 'backgrounds'
