@@ -3,7 +3,7 @@
     <h4>Register</h4>
     <form @submit.prevent="register">
       <div class="form-group">
-        <input type="text" class="form-control-small input-sm" v-model="userName" placeholder="Name" required>
+        <input type="text" class="form-control-small input-sm" v-model="name" placeholder="Name" required>
       </div>
       <div class="form-group">
         <input type="email" class="form-control-small input-sm" v-model="email" placeholder="Email" required>
@@ -24,7 +24,7 @@ export default {
   name: 'register',
   data() {
     return {
-      userName: '',
+      name: '',
       email: '',
       password: ''
     }
@@ -32,7 +32,7 @@ export default {
   computed: {},
   methods: {
     register() {
-      this.$store.dispatch('register', { userName: this.userName, email: this.email, password: this.password })
+      this.$store.dispatch('register', { name: this.name, email: this.email, password: this.password })
     }
   },
   components: {}
