@@ -7,7 +7,10 @@ const actions = {
 }
 
 const models = {
-
+  background: {
+    name: 'Background',
+    endpoint: 'backgrounds'
+  },
 }
 
 module.exports = {
