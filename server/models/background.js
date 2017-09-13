@@ -7,9 +7,11 @@ var schema = new mongoose.Schema({
   description: { type: String },
   feature: {type: Object, required: true, default: []}, //send whole object
   extra: {type: Array, type: []}, // send one of 
-  tools: {type: Array, default: []}, //send all
+  tools: {type: Array, required: true, default: []}, //send all
   skills: {type: Array, required: true, default: []}, // send all
   equipment: {type: Array, required: true, default: []}, // send all
+
+  //Moving to seperate models
   traits: {type: Array, required: true, default: []}, // send one
   ideals: {type: Array, required: true, default: []}, // send one
   bonds: {type: Array, required: true, default: []}, // send one
@@ -17,4 +19,3 @@ var schema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model(models.background.name, schema);
-

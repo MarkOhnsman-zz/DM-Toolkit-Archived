@@ -17,6 +17,10 @@ const models = {
     name: 'Background',
     endpoint: 'backgrounds'
   },
+  character: {
+    name: 'Character',
+    endpoint: 'characters'
+  },
   race: {
     name: 'Race',
     endpoint: 'races'
