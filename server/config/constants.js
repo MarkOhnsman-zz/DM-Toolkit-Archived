@@ -17,6 +17,10 @@ const models = {
     name: 'Background',
     endpoint: 'backgrounds'
   },
+  race: {
+    name: 'Race',
+    endpoint: 'races'
+  }
 }
 
 module.exports = {
