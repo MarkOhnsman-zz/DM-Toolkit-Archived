@@ -47,7 +47,7 @@ var store = new Vuex.Store({
             return handleError(res.data.error)
           }
           commit('setUser', res.data.data)
-          router.push('/home')
+          router.push('/dashboard')
         })
         .catch(handleError)
     },
@@ -58,7 +58,7 @@ var store = new Vuex.Store({
             return handleError(res.data.error)
           }
           commit("setUser", res.data.data)
-          router.push('/home')
+          router.push('/dashboard')
         })
         .catch(handleError)
     },
@@ -69,7 +69,7 @@ var store = new Vuex.Store({
             return router.push('/login')
           }
           state.user = res.data.data
-          router.push('/home')
+          router.push('/dashboard')
         }).catch(err => {
           router.push('/login')
         })
