@@ -6,7 +6,7 @@ var schema = new mongoose.Schema({
   name: { type: String, required: true },
   desc: { type: String },
   ability: {type: Object, required: true, default: {}},
-  age: {type: Array, required: true, type: []},
+  age: {type: Array, required: true, type: []}, //redefine in build
   speed: {type: Number, default: 20},
   languages: {type: Array, required: true, default: []},
   racials: {type: Object, required: true, default: {}},

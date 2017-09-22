@@ -11,11 +11,11 @@ var schema = new mongoose.Schema({
   skills: {type: Array, required: true, default: []}, // send all
   equipment: {type: Array, required: true, default: []}, // send all
 
-  //Moving to seperate models
-  traits: {type: Array, required: true, default: []}, // send one
-  ideals: {type: Array, required: true, default: []}, // send one
-  bonds: {type: Array, required: true, default: []}, // send one
-  flaws: {type: Array, required: true, default: []},   //send one
+  
+  traits: {type: Array, required: true, default: []}, // send one string
+  ideals: {type: Array, required: true, default: []}, // send one object
+  bonds: {type: Array, required: true, default: []}, // send one string
+  flaws: {type: Array, required: true, default: []},   //send one string 
 });
 
 module.exports = mongoose.model(models.background.name, schema);

@@ -19,7 +19,9 @@ const models = {
   },
   character: {
     name: 'Character',
-    endpoint: 'characters'
+    endpoint: 'characters',
+    useCustomRoutes: true,
+    //preventDefaultApi: true
   },
   race: {
     name: 'Race',

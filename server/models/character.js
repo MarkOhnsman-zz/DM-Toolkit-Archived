@@ -16,9 +16,9 @@ var schema = new mongoose.Schema({
 
     extra: { type: String },
     trait: { type: String },
-    ideals: { type: Object },
-    bonds: { type: String },
-    flaws: { type: String },
+    ideal: { type: Object },
+    bond: { type: String },
+    flaw: { type: String },
 
     ///Racial Traits
     race: { type: String, required: true },
@@ -31,7 +31,6 @@ var schema = new mongoose.Schema({
     sub: { type: Object },
 
     //additional stats
-    abilities: { type: Object },
     gender: { type: String },
     height: { type: String },
     weight: { type: String }
